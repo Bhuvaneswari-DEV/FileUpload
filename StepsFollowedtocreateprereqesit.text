@@ -1,0 +1,43 @@
+﻿Added packages
+Add Connection strings in appsettings.json
+Add new Database Schema in MYSQL and set default schema
+Add Model Folder under root and Create Class while creating class add the following namespace
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+Create Migrations  and Data Folder under root
+Create DB context as MySqlContext.cs under Data folder add using Microsoft.EntityFrameworkCore;
+In Startup.cs add using Microsoft.EntityFrameworkCore; since for MySQL and add Model Data from data context folder
+Inject MySQLContex in Startup.cs->Configuration services.
+Open nuget package manager console and type the following
+to create data migration under migrations folder.
+and to update the database.
+PM>  dotnet ef migrations add FirstMigration
+Build started...
+Build succeeded.
+Done. To undo this action, use 'ef migrations remove'
+PM> dotnet ef database update
+Build started...
+Build succeeded.
+Done.
+Add Companies folder under Pages
+Add rasor view crud operation to scaffold pages.And add Company index and other pages in _Layout  in Shared folders
+Add model calss Users and put Attribute constraints with Company 
+Add DBSet into mysql context under data folder.
+After change in model add new migration with comment changes in database 
+update database using PM
+PM> dotnet ef migrations add AddedUseralongwithcompany
+Build started...
+Build succeeded.
+An operation was scaffolded that may result in the loss of data. Please review the migration for accuracy.
+Done. To undo this action, use 'ef migrations remove'
+PM> dotnet ef database update
+Build started...
+Build succeeded.
+Done.
+PM> dotnet ef migrations add updatedMySQLDataContext
+PM> dotnet ef database update
+Created User,Company and Branch Pages using MVVM based coding using Razor Pages
+Creating Identity Account Login Page using Anti Forgery Cookie configuration IAuthentication Service 3.1 with Claims principles.
+
+
+
